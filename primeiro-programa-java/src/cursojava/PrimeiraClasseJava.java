@@ -5,24 +5,15 @@ public class PrimeiraClasseJava {
 	/* Main é o método auto executável em Java */
 	public static void main(String[] args) {
 
-		/* Estrutura de repetição While */
+		/* Estrutura de repetição FOR */
 
-		int numero = 0;
-
-		while (numero <= 60) { /* Verifica depois que executa */
+		/* for (int numero = 0; numero <= 10; numero ++ ) {
+			System.out.println("O número atual é: " + numero); */
+			
+		for (int numero = 10; numero >= 0; numero -- ) {
 			System.out.println("O número atual é: " + numero);
-			numero++;
+			
 		}
-
-		/*--------------------------------------------------------*/
-
-		int numero2 = 0;
-		do { /* primeiro executa e depois verifica */
-
-			System.out.println("O número atual é: " + numero2);
-			numero2++;
-
-		} while (numero2 <= 60);
 
 	}
 }
