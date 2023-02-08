@@ -5,14 +5,15 @@ public class PrimeiraClasseJava {
 	/* Main é o método auto executável em Java */
 	public static void main(String[] args) {
 
-		/* Estrutura de repetição FOR e Continue */
+		/* Módulo: Restp da divisão % */
+		
+		double carro = 9;
+		double pessoa = 2;
+		
+		double resto = carro % pessoa; /* "%" OPERADOR DE MÓDULO OU MOD*/
+		
+		System.out.println("Sobraram exatamente: " + resto + " carros.");
 
-		for (int numero = 0; numero <= 10; numero++) {
-			if (numero == 3 || numero == 6 || numero == 9) {
-				System.out.println("Blz, encontrei o número: " + numero);
-				continue;
-			}
-		}
 
 	}
 }
