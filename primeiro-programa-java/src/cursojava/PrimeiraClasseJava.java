@@ -10,7 +10,7 @@ public class PrimeiraClasseJava {
 		String carros = JOptionPane.showInputDialog("Informe a quantidade de carros: ");
 		String pessoas = JOptionPane.showInputDialog("Informe a quantidade de pessoas: ");
 
-		/*Conversão de dado String em numero*/
+		/* Conversão de dado String em numero */
 		double carroNumero = Double.parseDouble(carros);
 		double pessoaNumero = Double.parseDouble(pessoas);
 
@@ -18,7 +18,21 @@ public class PrimeiraClasseJava {
 
 		double resto = carroNumero % pessoaNumero;
 
-		JOptionPane.showMessageDialog(null, "Divisão para pessoas deu: " + divisao + " carros e sobrou " + resto + " carro(s).");
+		int resposta = JOptionPane.showConfirmDialog(null, "Desejeja ver o resultado da divisão?");
+
+		if (resposta == 0) {
+			JOptionPane.showInternalMessageDialog(null, "Divisão para as pessoas deu: " + divisao);
+		} else {
+			System.out.println("Não quis ver o resultado.");
+		}
+
+		resposta = JOptionPane.showConfirmDialog(null, "Desejeja ver o RESTO da divisão?");
+
+		if (resposta == 0) {
+			JOptionPane.showMessageDialog(null, "O resultado da divisão é: " + resto);
+		} else {
+			System.out.println("Não quis ver o resultado.");
+		}
 
 	}
 }
