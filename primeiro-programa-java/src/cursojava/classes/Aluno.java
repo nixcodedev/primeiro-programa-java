@@ -19,7 +19,13 @@ public class Aluno {
 	}
 	
 	public Aluno (String nomePadrao) {
+		nome = nomePadrao;
 		
+	}
+	
+	public Aluno(String nomePadrao, int idadePadrao) {
+		nome = nomePadrao;
+		idade = idadePadrao;
 	}
 
 }
