@@ -14,7 +14,10 @@ public class PrimeiraClasseJava {
 		Aluno aluno2 = new Aluno(); //Aqui será o aluno Pedro
 		
 		Aluno aluno3 = new Aluno(); //Aqui será o aluno Alex
+
+		Aluno aluno4 = new Aluno("Maria");
 		
+		Aluno aluno5 = new Aluno("José", 50);
 
 	}
 }
