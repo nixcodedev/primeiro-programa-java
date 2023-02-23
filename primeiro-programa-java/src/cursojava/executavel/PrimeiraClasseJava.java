@@ -14,6 +14,7 @@ public class PrimeiraClasseJava {
 		 * aluno1 é uma referência para o objeto Aluno (variável que representa o Aluno)
 		 */
 		Aluno aluno1 = new Aluno(); // Aqui será o aluno João
+
 		aluno1.setNome("Nixon Sena");
 		aluno1.setIdade(41);
 		aluno1.setDataNascimento("09/11/1981");
@@ -40,6 +41,16 @@ public class PrimeiraClasseJava {
 
 		Aluno aluno2 = new Aluno(); // Aqui será o aluno Pedro
 
+		aluno2.setNome("Tiago Reale");
+		aluno2.setIdade(38);
+		aluno2.setDataNascimento("20/10/1984");
+
+		System.out.println("\nNome é: " + aluno2.getNome());
+		System.out.println("Idade é: " + aluno2.getIdade());
+		System.out.println("Data de Nascimento: " + aluno2.getDataNascimento());
+
+		/* ========================================================================= */
+		
 		Aluno aluno3 = new Aluno(); // Aqui será o aluno Alex
 
 		Aluno aluno4 = new Aluno("Maria");
