@@ -43,6 +43,8 @@ public class PrimeiraClasseJava {
 		System.out.println("Nome da Escola: " + aluno1.getNomeEscola());
 		System.out.println("Data de Matrícula: " + aluno1.getSerieMatriculado());
 		System.out.println("Média da nota é: " + aluno1.getMediaNota());
+		System.out.println("Resultado: "+ (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
+		System.out.println("Resultado 2: " + aluno1.getAlunoAprovado2());
 
 		System.out.println("\n-------------------------------------------------------");
 
