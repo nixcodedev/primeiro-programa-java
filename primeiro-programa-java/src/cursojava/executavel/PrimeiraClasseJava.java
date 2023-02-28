@@ -25,6 +25,10 @@ public class PrimeiraClasseJava {
 		aluno1.setDataMatricula("01/01/2023");
 		aluno1.setNomeEscola("JDev Treinamento");
 		aluno1.setSerieMatriculado("3º ano");
+		aluno1.setNota1(90);
+		aluno1.setNota2(80.8);
+		aluno1.setNota3(70.9);
+		aluno1.setNota4(90.7);
 
 		System.out.println("ALUNO 1:");
 
@@ -38,6 +42,7 @@ public class PrimeiraClasseJava {
 		System.out.println("Idade é: " + aluno1.getDataMatricula());
 		System.out.println("Nome da Escola: " + aluno1.getNomeEscola());
 		System.out.println("Data de Matrícula: " + aluno1.getSerieMatriculado());
+		System.out.println("Média da nota é: " + aluno1.getMediaNota());
 
 		System.out.println("\n-------------------------------------------------------");
 
@@ -48,11 +53,16 @@ public class PrimeiraClasseJava {
 		aluno2.setNome("Tiago Reale");
 		aluno2.setIdade(38);
 		aluno2.setDataNascimento("20/10/1984");
+		aluno2.setNota1(87.2);
+		aluno2.setNota2(90.8);
+		aluno2.setNota3(35.99);
+		aluno2.setNota4(85.1);
 
 		System.out.println("\nALUNO 2:");
 		System.out.println("Nome é: " + aluno2.getNome());
 		System.out.println("Idade é: " + aluno2.getIdade());
 		System.out.println("Data de Nascimento: " + aluno2.getDataNascimento());
+		System.out.println("Média da nota é: " + aluno2.getMediaNota());
 
 		/* ========================================================================= */
 
