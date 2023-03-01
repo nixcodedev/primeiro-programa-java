@@ -29,7 +29,8 @@ public class PrimeiraClasseJava {
 		String note3 = JOptionPane.showInputDialog("Nota 3");
 		String note4 = JOptionPane.showInputDialog("Nota 4");
 
-		Aluno aluno1 = new Aluno(); 
+		Aluno aluno1 = new Aluno();
+		
 		aluno1.setNome(nome);
 		aluno1.setIdade(Integer.valueOf(idade)); // Convertendo string em inteiro
 		aluno1.setDataNascimento(dataNascimento);
@@ -44,22 +45,11 @@ public class PrimeiraClasseJava {
 		aluno1.setNota2(Double.parseDouble(note2));
 		aluno1.setNota3(Double.parseDouble(note3));
 		aluno1.setNota4(Double.parseDouble(note4));
-
-		System.out.println("ALUNO 1:");
-
-		System.out.println("Nome é: " + aluno1.getNome());
-		System.out.println("Idade é: " + aluno1.getIdade());
-		System.out.println("Data de Nascimento: " + aluno1.getDataNascimento());
-		System.out.println("Registro Geral: " + aluno1.getRegistroGeral());
-		System.out.println("CPF: " + aluno1.getNumeroCpf());
-		System.out.println("Nome da Mãe: " + aluno1.getNomeMae());
-		System.out.println("Nome do Pai: " + aluno1.getNomePai());
-		System.out.println("Idade é: " + aluno1.getDataMatricula());
-		System.out.println("Nome da Escola: " + aluno1.getNomeEscola());
-		System.out.println("Data de Matrícula: " + aluno1.getSerieMatriculado());
-		System.out.println("Média da nota é: " + aluno1.getMediaNota());
-		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
-		System.out.println("Resultado 2: " + aluno1.getAlunoAprovado2());
-
+		
+		System.out.println(aluno1.toString()); /*Descrição do objeto na memória*/
+		System.out.println("Média do aluno: " + aluno1.getMediaNota());
+		System.out.println("Resultado: " + aluno1.getAlunoAprovado2());
+		
+		
 	}
 }
