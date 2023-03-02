@@ -52,7 +52,7 @@ public class PrimeiraClasseJava {
 		
 		
 		
-		/*Equals e Hashcode (Diferenciar e comparar objetos)*/
+		/*Equals e Hashcode (Diferenciar e comparar objetos) */
 		
 		Aluno aluno1 = new Aluno();
 		aluno1.setNome("Alex");
