@@ -1,6 +1,5 @@
 package cursojava.classes;
 
-import java.util.Objects;
 
 /*Esta é a nossa classe/objeto que representa o Aluno*/
 public class Aluno {
@@ -128,8 +127,7 @@ public class Aluno {
 
 	/* Método que retorna a média do aluno */
 	public double getMediaNota() {
-		return (disciplina.getNota1() + disciplina.getNota2()
-		+ disciplina.getNota3() + disciplina.getNota4()) / 4;
+		return (disciplina.getNota1() + disciplina.getNota2() + disciplina.getNota3() + disciplina.getNota4()) / 4;
 	}
 
 	/* Método que retorna true para aprovado e false para reprovado */
@@ -149,6 +147,14 @@ public class Aluno {
 		} else {
 			return "Aluno está reprovado";
 		}
+	}
+
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
+				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
+				+ serieMatriculado + ", disciplina=" + disciplina + "]";
 	}
 
 }

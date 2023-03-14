@@ -99,4 +99,13 @@ public class Disciplina {
 				&& Double.doubleToLongBits(nota4) == Double.doubleToLongBits(other.nota4);
 	}
 
+	@Override
+	public String toString() {
+		return "Disciplina [nota1=" + nota1 + ", Disciplina1=" + Disciplina1 + ", nota2=" + nota2 + ", Disciplina2="
+				+ Disciplina2 + ", nota3=" + nota3 + ", Disciplina3=" + Disciplina3 + ", nota4=" + nota4
+				+ ", Disciplina4=" + Disciplina4 + "]";
+	}
+	
+	
+
 }
