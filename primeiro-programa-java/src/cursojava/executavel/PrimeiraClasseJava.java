@@ -47,12 +47,13 @@ public class PrimeiraClasseJava {
 		aluno1.setNomeMae(mae);
 		aluno1.setNomePai(pai);
 		aluno1.setDataMatricula(matricula);
-		aluno1.setNomeEscola(escola);
 		aluno1.setSerieMatriculado(serie);
-		aluno1.setNota1(Double.parseDouble(note1));
-		aluno1.setNota2(Double.parseDouble(note2));
-		aluno1.setNota3(Double.parseDouble(note3));
-		aluno1.setNota4(Double.parseDouble(note4));
+		aluno1.setNomeEscola(escola);
+		
+		aluno1.getDisciplina().setNota1(Double.parseDouble(note1));
+		aluno1.getDisciplina().setNota2(Double.parseDouble(note2));
+		aluno1.getDisciplina().setNota3(Double.parseDouble(note3));
+		aluno1.getDisciplina().setNota4(Double.parseDouble(note4));
 
 		aluno1.setDisciplina1(disciplina1);
 		aluno1.setDisciplina2(disciplina2);
