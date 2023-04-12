@@ -19,7 +19,7 @@ public class PrimeiraClasseJava {
 		String idade = JOptionPane.showInputDialog("Qual a idade do aluno?");
 		String dataNascimento = JOptionPane.showInputDialog("Qual a data de nascimento?");
 		String rg = JOptionPane.showInputDialog("Digite o número do RG.");
-		String cpf = JOptionPane.showInputDialog("Digite o RG");
+		String cpf = JOptionPane.showInputDialog("Digite o CPF");
 		String mae = JOptionPane.showInputDialog("Qual nome da mãe?");
 		String pai = JOptionPane.showInputDialog("Qual nome do pai?");
 		String matricula = JOptionPane.showInputDialog("Qual a data da matrícula?");
@@ -48,6 +48,14 @@ public class PrimeiraClasseJava {
 			disciplina.setNota(Double.valueOf(notaDisciplina));
 
 			aluno1.getDisciplinas().add(disciplina);
+
+		}
+
+		/* CONDICIONAL PARA REMOVER DISCIPLINA */
+		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
+		if (escolha == 0) {
+			String disciplinaRemover = JOptionPane.showInputDialog(null, "Qual a disciplina, 1, 2, 3 ou 4?");
+			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
 
 		}
 

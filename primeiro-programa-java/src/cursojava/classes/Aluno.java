@@ -19,17 +19,14 @@ public class Aluno {
 	private String serieMatriculado;
 
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
-	
+
 	public void setDisciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;
 	}
-	
-	
+
 	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}
-
-	
 
 	public Aluno() { /* Cria os dados na memória - Sendo padrão do Java */
 
@@ -132,15 +129,16 @@ public class Aluno {
 
 	/* Método que retorna a média do aluno */
 	public double getMediaNota() {
-		
+
 		double somaNotas = 0.0;
-		
+
 		for (Disciplina disciplina : disciplinas) {
 			somaNotas += disciplina.getNota();
-			
+
 		}
-		
-		return somaNotas / disciplinas.size(); /*O Size retorna quantos objetos tem na lista, no caso as disciplinas.*/
+
+		return somaNotas
+				/ disciplinas.size(); /* O Size retorna quantos objetos tem na lista, no caso as disciplinas. */
 	}
 
 	/* Método que retorna true para aprovado e false para reprovado */
