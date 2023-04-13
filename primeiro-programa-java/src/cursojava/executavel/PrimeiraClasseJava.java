@@ -80,11 +80,13 @@ public class PrimeiraClasseJava {
 
 		for (Aluno aluno : alunos) {
 
-			System.out.println(aluno.toString()); // Descrição do objeto na memória
-			System.out.println("Média do aluno: " + aluno.getMediaNota());
-			System.out.println("Resultado: " + aluno.getAlunoAprovado2());
-			System.out.println("--------------------------------------------------------------------------");
-
+			if (aluno.getNome().equalsIgnoreCase("alex")) {/* CONDICIONAL PARA PROCURAR O ALNO NA LISTA */
+				System.out.println(aluno.toString()); // Descrição do objeto na memória
+				System.out.println("Média do aluno: " + aluno.getMediaNota());
+				System.out.println("Resultado: " + aluno.getAlunoAprovado2());
+				System.out.println("--------------------------------------------------------------------------");
+				break;
+			}
 		}
 
 	}
