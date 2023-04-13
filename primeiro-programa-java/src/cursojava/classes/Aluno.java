@@ -153,7 +153,7 @@ public class Aluno {
 
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNota();
-		/*CONDIÇÃO ANINHADA PARA VERIFICAR MÉDIA*/
+		/* CONDIÇÃO ANINHADA PARA VERIFICAR MÉDIA */
 		if (media >= 50) {
 			if (media >= 70) {
 				return "Aluno está aprovado";
