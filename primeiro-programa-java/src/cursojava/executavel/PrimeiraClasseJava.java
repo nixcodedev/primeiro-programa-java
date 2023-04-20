@@ -78,29 +78,24 @@ public class PrimeiraClasseJava {
 			alunos.add(aluno1);
 		}
 
-		for (Aluno aluno : alunos) {
+		for (int pos = 0; pos < alunos.size(); pos++) {/* FOR PARA PERCURRER UMA LISTA PELA POSIÇÃO: 0, 1, 2, 3... */
+			Aluno aluno = alunos.get(pos);
 
-			if (aluno.getNome().equalsIgnoreCase("alex")) {/* CONDICIONAL PARA PROCURAR O ALNO NA LISTA */
-				alunos.remove(aluno); /* REMOVE O ALUNO CASO SEJA ENCONTRADO O DA CONDICIONAL IF */
-				break;
-			} else {
-				System.out.println(aluno.toString()); // Descrição do objeto na memória
-				System.out.println("Média do aluno: " + aluno.getMediaNota());
-				System.out.println("Resultado: " + aluno.getAlunoAprovado2());
-				System.out.println("--------------------------------------------------------------------------");
-			}
-		}
+			System.out.println("--------------------------------------------------------------");
+			System.out.println("Aluno = " + aluno.getNome());
+			System.out.println("Média do aluno = " + aluno.getMediaNota());
+			System.out.println("Resultado = " + aluno.getAlunoAprovado2());
+			System.out.println("\n");
 
-		for (Aluno aluno : alunos) {
-			System.out.println("Alunos que sobraram na lista");
-			System.out.println(aluno.getNome());
-			System.out.println("Suas matérias são:");
+			for (int posd = 0; posd < aluno.getDisciplinas().size(); posd++) {
 
-			for (Disciplina disciplina : aluno.getDisciplinas()) {
-				System.out.println(disciplina.getDisciplina());
+				Disciplina disc = aluno.getDisciplinas().get(posd);
+				System.out.println("Matéria = " + disc.getDisciplina() + " - Nota = " + disc.getNota());
+
 			}
 
 		}
 
 	}
+
 }
