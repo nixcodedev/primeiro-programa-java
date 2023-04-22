@@ -47,7 +47,7 @@ public class PrimeiraClasseJava {
 			 * aluno1.setNomeEscola(escola);
 			 */
 
-			for (int pos = 1; pos <= 4; pos++) {
+			for (int pos = 1; pos <= 1; pos ++) {
 				String nomeDisciplina = JOptionPane.showInputDialog("Nome da Disciplina " + pos + "?");
 				String notaDisciplina = JOptionPane.showInputDialog("Nota da Disciplina " + pos + "?");
 
@@ -78,8 +78,22 @@ public class PrimeiraClasseJava {
 			alunos.add(aluno1);
 		}
 
-		for (int pos = 0; pos < alunos.size(); pos++) {/* FOR PARA PERCURRER UMA LISTA PELA POSIÇÃO: 0, 1, 2, 3... */
+		for (int pos = 0; pos < alunos.size(); pos ++) {/* FOR PARA PERCURRER UMA LISTA PELA POSIÇÃO: 0, 1, 2, 3... */
 			Aluno aluno = alunos.get(pos);
+			
+			if (aluno.getNome().equalsIgnoreCase("alex")) {
+				Aluno trocar = new Aluno();
+				trocar.setNome("Aluno foi trocado");
+				
+				Disciplina disciplina = new Disciplina();
+				disciplina.setDisciplina("Matemática");
+				disciplina.setNota(96);
+				
+				trocar.getDisciplinas().add(disciplina);
+				
+				alunos.set(pos,  trocar);
+				aluno = alunos.get(pos);				
+			}
 
 			System.out.println("--------------------------------------------------------------");
 			System.out.println("Aluno = " + aluno.getNome());
