@@ -15,6 +15,14 @@ public class PrimeiraClasseJava {
 	/* Main é o método auto executável em Java */
 	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
+		
+		String login = JOptionPane.showInputDialog("Informe o login");
+		String senha = JOptionPane.showInputDialog("Informe a senha");
+		
+		/*CONDICIONAL PARA VERIFICAR SE O LOGIN E A SENHA SÃO
+		 * VALIDOS PARA EXECUTAR O CÓDIGO*/
+		if(login.equalsIgnoreCase("admin") &&
+				senha.equalsIgnoreCase("admin")) {
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		
@@ -106,7 +114,6 @@ public class PrimeiraClasseJava {
 		
 		System.out.println("\n------------------- LISTA DOS ALUNOS APROVADOS -------------------");
 		for (Aluno aluno : maps.get(StatusAluno.APROVADO)) {
-			System.out.println("Aluno: " + aluno.getNome());
 			System.out.println("Resultado = " + aluno.getAlunoAprovado2() + " com média de = " + aluno.getMediaNota());
 			System.out.println("");
 		}
@@ -124,6 +131,11 @@ public class PrimeiraClasseJava {
 			System.out.println("Resultado = " + aluno.getAlunoAprovado2() + " com média de = " + aluno.getMediaNota());
 			System.out.println("");
 		}
+	
+	}else {/*SE O LOGIN OU SENHA ESTIVEREM ERRADOS, O CÓDIGO NÃO
+			* EXECUTA E EXIBE A MENSAGEM*/
+		JOptionPane.showMessageDialog(null, "Login ou Senha inválidos!");
+	}
 	
 	}
 
