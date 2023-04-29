@@ -140,7 +140,7 @@ public class PrimeiraClasseJava {
 				 * SE O LOGIN OU SENHA ESTIVEREM ERRADOS, O CÓDIGO NÃO EXECUTA E EXIBE A
 				 * MENSAGEM.
 				 */
-			JOptionPane.showMessageDialog(null, "Login ou Senha inválidos!!!");
+			JOptionPane.showMessageDialog(null, "Login e/ou Senha inválidos!");
 		}
 
 	}
