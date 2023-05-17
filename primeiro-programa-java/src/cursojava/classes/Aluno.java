@@ -167,5 +167,18 @@ public class Aluno extends Pessoa {
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
 				+ serieMatriculado + "]";
 	}
+	
+	@Override /*Identifica método sobrescrito*/
+	public boolean pessoaMaiorIdade() {
+		
+		return idade >= 21; /*MUDANDO A REGRA*/
+	}
+	
+	public String msgMaiorIdade() {
+		return this.pessoaMaiorIdade() ? "Oba, aluno é maior de idade." : "Ixii, você é menor de idade.";
+	}
+	
+	
+	
 
 }
