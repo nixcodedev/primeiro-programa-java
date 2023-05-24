@@ -10,6 +10,9 @@ public abstract class Pessoa { /*transformando a classe em abstrata*/
 	protected String numeroCpf;
 	protected String nomeMae;
 	protected String nomePai;
+	
+	/*Método abstrato que fica na classe pai é obrigatório para as classes filhas*/
+	public abstract double salario();
 
 	public String getNome() {
 		return nome;
