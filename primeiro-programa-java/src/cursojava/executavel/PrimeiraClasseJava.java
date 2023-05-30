@@ -6,6 +6,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
+import cursojava.classes.Secretario;
 import cursojava.constantes.StatusAluno;
 
 public class PrimeiraClasseJava {
@@ -16,12 +17,17 @@ public class PrimeiraClasseJava {
 
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
+		
+		
+		Secretario secretario = new Secretario();/*Trabalhando diretamente com o objeto*/
+		secretario.setLogin(login);
+		secretario.setSenha(senha);
 
 		/*
 		 * CONDICIONAL PARA VERIFICAR SE O LOGIN E A SENHA SÃO VALIDOS PARA EXECUTAR O
 		 * CÓDIGO
 		 */
-		if (login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
+		if (secretario.autenticar()) {/*Se TRUE acessa, se FALSE não acessa*/
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
 
@@ -140,7 +146,7 @@ public class PrimeiraClasseJava {
 				 * SE O LOGIN OU SENHA ESTIVEREM ERRADOS, O CÓDIGO NÃO EXECUTA E EXIBE A
 				 * MENSAGEM.
 				 */
-			JOptionPane.showMessageDialog(null, "Login e/ou Senha inválidos!");
+			JOptionPane.showMessageDialog(null, "Acesso não permitido!");
 		}
 
 	}
