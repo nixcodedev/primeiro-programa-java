@@ -19,11 +19,13 @@ public class PrimeiraClasseJava {
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
+		PermitirAcesso permitirAcesso = new Secretario(login, senha);
+		
 		/*
 		 * CONDICIONAL PARA VERIFICAR SE O LOGIN E A SENHA SÃO VALIDOS PARA EXECUTAR O
 		 * CÓDIGO
 		 */
-		if (new Secretario().autenticar(login, senha)) {/*Se TRUE acessa, se FALSE não acessa*/
+		if (permitirAcesso.autenticar()) {/*Se TRUE acessa, se FALSE não acessa*/
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
 
