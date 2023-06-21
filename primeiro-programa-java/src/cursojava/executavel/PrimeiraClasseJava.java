@@ -26,8 +26,9 @@ public class PrimeiraClasseJava {
 		
 		if (new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()) {/*Vou travar o contrato para autorizar somente quem realmente tem o contrato 100% legítimo*/
 
-			/*List<Aluno> alunos = new ArrayList<Aluno>();*/
-			List<Aluno> alunos = null;
+			List<Aluno> alunos = new ArrayList<Aluno>();
+			/*List<Aluno> alunos = null    -    SIMULAÇÃO DO ERRO*/
+			
 
 			/*
 			 * É uma lista que dentro dela tem uma chave que identifica uma sequência de
@@ -94,7 +95,8 @@ public class PrimeiraClasseJava {
 						continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover?");
 					}
 				}
-
+				
+				System.out.println("AQUI O ERRO:");
 				alunos.add(aluno1);
 			}
 
@@ -148,8 +150,24 @@ public class PrimeiraClasseJava {
 		}
 		
 		}catch (Exception e) {
-			e.printStackTrace(); /*Imprime erro no console Java*/
-			JOptionPane.showMessageDialog(null, "Erro ao processar notas!" + e.getMessage());
+			
+			StringBuilder saida = new StringBuilder();
+			
+			/*Imprime erro no console Java*/
+			e.printStackTrace();
+			
+			/*Mensagem do erro ou causa*/
+			System.out.println(" Mensagem: " + e.getMessage());
+			
+			for (int pos = 0; pos < e.getStackTrace().length; pos++) {
+				saida.append("\n Classe do erro: " + e.getStackTrace()[pos].getClassName());
+				saida.append("\n Método do erro: " + e.getStackTrace()[pos].getMethodName());
+				saida.append("\n Linha do erro: " + e.getStackTrace()[pos].getLineNumber());
+				saida.append("\n Class: " + e.getStackTrace()[pos].getClass().getName());
+			}
+			
+			
+			JOptionPane.showMessageDialog(null, "Erro ao processar notas! " + saida.toString());
 		}
 
 	}
