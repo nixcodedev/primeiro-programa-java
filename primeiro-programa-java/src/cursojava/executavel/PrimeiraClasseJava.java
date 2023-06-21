@@ -17,6 +17,8 @@ public class PrimeiraClasseJava {
 	/* Main é o método auto executável em Java */
 	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
+		
+		try {
 
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
@@ -24,7 +26,8 @@ public class PrimeiraClasseJava {
 		
 		if (new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()) {/*Vou travar o contrato para autorizar somente quem realmente tem o contrato 100% legítimo*/
 
-			List<Aluno> alunos = new ArrayList<Aluno>();
+			/*List<Aluno> alunos = new ArrayList<Aluno>();*/
+			List<Aluno> alunos = null;
 
 			/*
 			 * É uma lista que dentro dela tem uma chave que identifica uma sequência de
@@ -32,7 +35,7 @@ public class PrimeiraClasseJava {
 			 */
 			HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 
-			for (int qtd = 1; qtd <= 5; qtd++) {/* Laço de repetição para nome do aluno */
+			for (int qtd = 1; qtd <= 2; qtd++) {/* Laço de repetição para nome do aluno */
 
 				/* new Aluno() é uma instância (Criação de Objeto) */
 				/*
@@ -142,6 +145,11 @@ public class PrimeiraClasseJava {
 				 * MENSAGEM.
 				 */
 			JOptionPane.showMessageDialog(null, "Acesso não permitido!");
+		}
+		
+		}catch (Exception e) {
+			e.printStackTrace(); /*Imprime erro no console Java*/
+			JOptionPane.showMessageDialog(null, "Erro ao processar notas!" + e.getMessage());
 		}
 
 	}
