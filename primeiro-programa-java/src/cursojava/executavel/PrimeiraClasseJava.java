@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
+import curso.java.excecao.ExcecaoProcessarNota;
 import cursojava.classes.Aluno;
 import cursojava.classes.Diretor;
 import cursojava.classes.Disciplina;
@@ -21,11 +22,11 @@ public class PrimeiraClasseJava {
 	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
 		
+		
+		
 		try {
+			lerArquivo();
 			
-		//File fil = new File("/home/nino/Área de trabalho/lines.txt");
-		//Scanner scanner = new Scanner(fil);
-
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
@@ -179,9 +180,9 @@ public class PrimeiraClasseJava {
 			JOptionPane.showMessageDialog(null, "Opa, um Null Pointer Exception: " + e.getClass());
 		
 
-		}catch (Exception e) { /*Captura todas as exceções que não escrevemos.*/
+		}catch (ExcecaoProcessarNota e) { /*Captura todas as exceções que não prevemos.*/
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "Erro inesperado: " + e.getClass().getName());
+			JOptionPane.showMessageDialog(null, "Erro da exceção customizada: " + e.getClass().getName());
 		}finally { /*Sempre é executado ocorrendo erros ou não. Porquê?*/
 				   /*Finally sempre é usado quando precisamos executar um processo havendo erros ou não no sistema.*/
 			JOptionPane.showMessageDialog(null, "Obrigado por aprender Java comigo!");
@@ -189,4 +190,12 @@ public class PrimeiraClasseJava {
 
   }
 	
+	public static void lerArquivo() throws ExcecaoProcessarNota {
+		try {
+			File fil = new File("/home/nino/Área de trabalho/linnes.txt");
+			Scanner scanner = new Scanner(fil);
+		}catch (FileNotFoundException e) {
+			throw new ExcecaoProcessarNota(e.getMessage());
+		}
+	}
 }
