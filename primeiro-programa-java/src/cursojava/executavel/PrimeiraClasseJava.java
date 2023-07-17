@@ -31,6 +31,7 @@ public class PrimeiraClasseJava {
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
 		
+		
 		if (new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()) {/*Vou travar o contrato para autorizar somente quem realmente tem o contrato 100% legítimo*/
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
@@ -157,8 +158,7 @@ public class PrimeiraClasseJava {
 			JOptionPane.showMessageDialog(null, "Acesso não permitido!");
 		}
 		
-		}catch (NumberFormatException e) {
-			
+		}catch (Exception e) {
 			StringBuilder saida = new StringBuilder();
 			
 			/*Imprime erro no console Java*/
@@ -176,13 +176,6 @@ public class PrimeiraClasseJava {
 			
 			
 			JOptionPane.showMessageDialog(null, "Erro de conversão de número!" + saida.toString());
-		}catch (NullPointerException e) {
-			JOptionPane.showMessageDialog(null, "Opa, um Null Pointer Exception: " + e.getClass());
-		
-
-		}catch (ExcecaoProcessarNota e) { /*Captura todas as exceções que não prevemos.*/
-			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "Erro da exceção customizada: " + e.getClass().getName());
 		}finally { /*Sempre é executado ocorrendo erros ou não. Porquê?*/
 				   /*Finally sempre é usado quando precisamos executar um processo havendo erros ou não no sistema.*/
 			JOptionPane.showMessageDialog(null, "Obrigado por aprender Java comigo!");
@@ -190,12 +183,8 @@ public class PrimeiraClasseJava {
 
   }
 	
-	public static void lerArquivo() throws ExcecaoProcessarNota {
-		try {
+	public static void lerArquivo() throws FileNotFoundException {
 			File fil = new File("/home/nino/Área de trabalho/linnes.txt");
 			Scanner scanner = new Scanner(fil);
-		}catch (FileNotFoundException e) {
-			throw new ExcecaoProcessarNota(e.getMessage());
-		}
 	}
 }
