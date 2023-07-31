@@ -30,8 +30,6 @@ public class PrimeiraClasseJava {
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
-		
-		
 		if (new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()) {/*Vou travar o contrato para autorizar somente quem realmente tem o contrato 100% legítimo*/
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
@@ -97,9 +95,8 @@ public class PrimeiraClasseJava {
 					int posicao = 1;
 
 					while (continuarRemover == 0) {
-						String disciplinaRemover = JOptionPane.showInputDialog(null,
-								"Qual a disciplina, 1, 2, 3 ou 4?");
-						aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - posicao);
+						String disciplinaRemover = JOptionPane.showInputDialog(null,"Qual a disciplina, 1, 2, 3 ou 4?");
+						System.out.println(aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - posicao));
 						posicao++;/* ++ soma + 1 */
 						continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover?");
 					}
@@ -184,7 +181,7 @@ public class PrimeiraClasseJava {
   }
 	
 	public static void lerArquivo() throws FileNotFoundException {
-			File fil = new File("/home/nino/Área de trabalho/linnes.txt");
+			File fil = new File("/home/nino/Área de trabalho/lines.txt");
 			Scanner scanner = new Scanner(fil);
 	}
 }
