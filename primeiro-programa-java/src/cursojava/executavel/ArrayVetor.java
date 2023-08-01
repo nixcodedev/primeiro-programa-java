@@ -8,7 +8,7 @@ public class ArrayVetor {
 		/*Array pode ser de todos os tipos de dados ne objetos também*/
 		
 		/*Array sempre deve ter a quantidade de posições definidas*/
-		double[] notas = new double[4];
+		double[] notas = new double[5];
 		
 		/*Atribuir valores nas posições do array*/
 		notas[0] = 7.8;
@@ -18,7 +18,10 @@ public class ArrayVetor {
 		
 		
 		
-		System.out.println(notas);
+		for (int pos = 0; pos < 5; pos++) {
+			System.out.println("Nota " + (pos + 1) + " é = " + notas[pos]);
+			
+		}
 	}
 
 }
