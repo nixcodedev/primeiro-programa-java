@@ -20,9 +20,6 @@ public class ArrayVetor {
 			
 		}
 		
-		
-		
-		
 		for (int pos = 0; pos < notas.length; pos++) {
 			System.out.println("Nota " + (pos + 1) + " é = " + notas[pos]);
 			
