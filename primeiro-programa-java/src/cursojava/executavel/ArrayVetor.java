@@ -1,5 +1,7 @@
 package cursojava.executavel;
 
+import javax.swing.JOptionPane;
+
 public class ArrayVetor {
 	
 	/*Método Main é utilizado para executar o código*/
@@ -7,18 +9,21 @@ public class ArrayVetor {
 		
 		/*Array pode ser de todos os tipos de dados ne objetos também*/
 		
+		String posicoes = JOptionPane.showInputDialog("Quantas posições o array deve ter?" );
+		
 		/*Array sempre deve ter a quantidade de posições definidas*/
-		double[] notas = new double[5];
+		double[] notas = new double[Integer.parseInt(posicoes)];
 		
-		/*Atribuir valores nas posições do array*/
-		notas[0] = 7.8;
-		notas[1] = 8.7;
-		notas[2] = 9.7;
-		notas[3] = 9.9;
+		for (int pos = 0; pos < notas.length; pos++) {
+			String valor = JOptionPane.showInputDialog("Qual o valor da posição? " + pos);
+			notas[pos] = Double.valueOf(valor);
+			
+		}
 		
 		
 		
-		for (int pos = 0; pos < 5; pos++) {
+		
+		for (int pos = 0; pos < notas.length; pos++) {
 			System.out.println("Nota " + (pos + 1) + " é = " + notas[pos]);
 			
 		}
