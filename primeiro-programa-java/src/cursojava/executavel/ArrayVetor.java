@@ -7,21 +7,20 @@ public class ArrayVetor {
 	/*Método Main é utilizado para executar o código*/
 	public static void main(String[] args) {
 		
-		/*Array pode ser de todos os tipos de dados ne objetos também*/
+		String[] valores = {"Nixon","98.5","Curso Java Web","contato@nixcodedev.com.br","80"};
 		
-		String posicoes = JOptionPane.showInputDialog("Quantas posições o array deve ter?" );
+		/*outros tipos de arrays
+		 * 
+		 *  int[] inteiros = new int[10];
+		 *  float[] floats = new float[10];
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */		
 		
-		/*Array sempre deve ter a quantidade de posições definidas*/
-		double[] notas = new double[Integer.parseInt(posicoes)];
-		
-		for (int pos = 0; pos < notas.length; pos++) {
-			String valor = JOptionPane.showInputDialog("Qual o valor da posição? " + pos);
-			notas[pos] = Double.valueOf(valor);
-			
-		}
-		
-		for (int pos = 0; pos < notas.length; pos++) {
-			System.out.println("Nota " + (pos + 1) + " é = " + notas[pos]);
+		for (int pos = 0; pos < valores.length; pos++) {
+			System.out.println("Valor na posição: " + pos + " é = " + valores[pos]);
 			
 		}
 	}
