@@ -2,27 +2,37 @@ package cursojava.executavel;
 
 import javax.swing.JOptionPane;
 
+import cursojava.classes.Aluno;
+import cursojava.classes.Disciplina;
+
 public class ArrayVetor {
-	
-	/*Método Main é utilizado para executar o código*/
+
+
 	public static void main(String[] args) {
+
+		double[] notas = {8.8,9.7,7.6,6.8};
+		double[] notasLogica = {7.1,5.7,9.6,7.8};
+
+		//Criação do aluno
+		Aluno aluno = new Aluno();
+		aluno.setNome("Nixon Sena");
+		aluno.setNomeEscola("JDev Treinamento");
 		
-		String[] valores = {"Nixon","98.5","Curso Java Web","contato@nixcodedev.com.br","80"};
+		//Criação da disciplina
+		Disciplina disciplina = new Disciplina();
+		disciplina.setDisciplina("Cusro de Java");
+		disciplina.setNota(notas);
 		
-		/*outros tipos de arrays
-		 * 
-		 *  int[] inteiros = new int[10];
-		 *  float[] floats = new float[10];
-		 * 
-		 * 
-		 * 
-		 * 
-		 * */		
+		aluno.getDisciplinas().add(disciplina);
 		
-		for (int pos = 0; pos < valores.length; pos++) {
-			System.out.println("Valor na posição: " + pos + " é = " + valores[pos]);
-			
-		}
+		Disciplina disciplina2 = new Disciplina();
+		disciplina2.setDisciplina("Lógica de Porgamação");
+		disciplina2.setNota(notasLogica);
+		
+		aluno.getDisciplinas().add(disciplina2);
+		
+		
+
 	}
 
 }

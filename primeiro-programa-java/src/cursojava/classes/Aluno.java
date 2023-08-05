@@ -128,7 +128,7 @@ public class Aluno extends Pessoa {
 		double somaNotas = 0.0;
 
 		for (Disciplina disciplina : disciplinas) {
-			somaNotas += disciplina.getNota();
+			somaNotas += disciplina.getMediaNotas();
 
 		}
 
@@ -167,24 +167,21 @@ public class Aluno extends Pessoa {
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
 				+ serieMatriculado + "]";
 	}
-	
-	@Override /*Identifica método sobrescrito*/
+
+	@Override /* Identifica método sobrescrito */
 	public boolean pessoaMaiorIdade() {
-		
-		return idade >= 21; /*MUDANDO A REGRA*/
+
+		return idade >= 21; /* MUDANDO A REGRA */
 	}
-	
+
 	public String msgMaiorIdade() {
 		return this.pessoaMaiorIdade() ? "Oba, aluno é maior de idade." : "Ixii, você é menor de idade.";
 	}
 
 	@Override
 	public double salario() {
-		
+
 		return 1500.90;
 	}
-	
-	
-	
 
 }
