@@ -4,7 +4,7 @@ public class Matriz {
 
 	public static void main(String[] args) {
 
-		/* Matriz notas com 1 linha e 3 colunas */
+		/* Matriz notas com 2 linhas e 3 colunas */
 		int notas[][] = new int[2][3];
 
 		/* Primeiro elemento */
