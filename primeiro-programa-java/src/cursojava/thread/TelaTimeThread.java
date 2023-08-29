@@ -32,6 +32,8 @@ public class TelaTimeThread extends JDialog {
 	private JButton jButton2 = new JButton("Stop");
 	
 	
+	private ImplementacaoFilaThread fila = new ImplementacaoFilaThread();
+	
 	
 
 	
@@ -82,8 +84,11 @@ public class TelaTimeThread extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) { /*Executa o clique no botão*/
 				
+				ObjetoFilaThread filaThread = new ObjetoFilaThread();
+				filaThread.setNome(mostraTempo.getText());
+				filaThread.setEmail(mostraTempo2.getText());
 			
-				
+				fila.add(filaThread);
 				
 			}
 		});
@@ -98,8 +103,7 @@ public class TelaTimeThread extends JDialog {
 			}
 		});
 		
-		
-
+		fila.start();
 		add(jPanel, BorderLayout.WEST);
 
 		/* Sempre será o último comando */

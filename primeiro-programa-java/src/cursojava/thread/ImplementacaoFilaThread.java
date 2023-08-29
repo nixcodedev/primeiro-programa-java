@@ -16,6 +16,8 @@ public class ImplementacaoFilaThread extends Thread {
 	@Override
 	public void run() {
 		
+		System.out.println("Fila rodando...");
+		
 		Iterator iteracao = pilha_filha.iterator();
 		
 		synchronized (iteracao) { /*Bloqueia o acesso a esta lista por outros processos*/
@@ -53,5 +55,5 @@ public class ImplementacaoFilaThread extends Thread {
 		}
 				
 	}
-
+	
 }
