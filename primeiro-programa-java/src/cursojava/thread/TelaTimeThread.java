@@ -30,13 +30,9 @@ public class TelaTimeThread extends JDialog {
 
 	private JButton jButton = new JButton("Add Lista");
 	private JButton jButton2 = new JButton("Stop");
-	
-	
-	private ImplementacaoFilaThread fila = new ImplementacaoFilaThread();
-	
-	
 
-	
+	private ImplementacaoFilaThread fila = new ImplementacaoFilaThread();
+
 	public TelaTimeThread() { /* Executa o que tiver dentro no momento da abertura ou execução */
 
 		setTitle("Minha tela de time com thread"); // titulo da janela
@@ -45,7 +41,11 @@ public class TelaTimeThread extends JDialog {
 		setResizable(false); // travar tamanho da janela
 		/* Primeira parte concluída */
 
-		GridBagConstraints gridBagConstraints = new GridBagConstraints(); /*Controlador de posicionamento de componentes*/
+		GridBagConstraints gridBagConstraints = new GridBagConstraints(); 
+		
+		/*Controlador de posicionamento de
+		 * componentes */
+		
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 0;
 		gridBagConstraints.gridwidth = 2;
@@ -78,31 +78,39 @@ public class TelaTimeThread extends JDialog {
 		jButton2.setPreferredSize(new Dimension(92, 25));
 		gridBagConstraints.gridx++;
 		jPanel.add(jButton2, gridBagConstraints);
-		
+
 		jButton.addActionListener(new ActionListener() {
-			
+
 			@Override
-			public void actionPerformed(ActionEvent e) { /*Executa o clique no botão*/
+			public void actionPerformed(ActionEvent e) { /* Executa o clique no botão */
 				
-				ObjetoFilaThread filaThread = new ObjetoFilaThread();
-				filaThread.setNome(mostraTempo.getText());
-				filaThread.setEmail(mostraTempo2.getText());
-			
-				fila.add(filaThread);
-				
+				if (fila == null) {
+					fila = new ImplementacaoFilaThread();
+					fila.start();
+				}
+
+				for (int qtd = 0; qtd < 100; qtd++) { /*Simulando 100 envios em massa*/
+
+					ObjetoFilaThread filaThread = new ObjetoFilaThread();
+					filaThread.setNome(mostraTempo.getText());
+					filaThread.setEmail(mostraTempo2.getText() + " - " + qtd);
+
+					fila.add(filaThread);
+				}
 			}
 		});
-		
+
 		jButton2.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				
-				
+				fila.stop();
+				fila = null;
+
 			}
 		});
-		
+
 		fila.start();
 		add(jPanel, BorderLayout.WEST);
 
