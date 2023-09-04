@@ -1,5 +1,6 @@
 package cursojava.modulo_datas;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 	public class DatasEmJava{
@@ -23,6 +24,17 @@ import java.util.Date;
 			System.out.println("Ano: " + (date.getYear() + 1900));
 			
 			
+			
+			/*---------------------------Simple Date Format---------------------------*/
+			
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+			
+			System.out.println("Data atual em formato padrão e String " + simpleDateFormat.format(date));
+			
+			
+			simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+			
+			System.out.println("Data em formato para banco de dados: " + simpleDateFormat.format(date));
 		
 		}
 	
